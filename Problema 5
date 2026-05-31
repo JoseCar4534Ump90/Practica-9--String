@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string cadena1 = "ana";
+    std::string cadena2 = "jose";
+    std::string resultado = "";
+    
+    // Usando operator+ y append
+    resultado = cadena1 + resultado;
+    resultado.append(cadena2);
+    
+    std::cout << "Salida esperada: " << resultado << std::endl;
+    return 0;
+}
