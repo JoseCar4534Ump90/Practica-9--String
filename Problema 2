@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string texto = "Esta es una entrada de texto para probar numero de palabras";
+    int palabras = 0;
+    bool enPalabra = false;
+    
+    for (size_t i = 0; i < texto.size(); ++i) {
+        if (texto.at(i) != ' ') {
+            if (!enPalabra) {
+                palabras++;
+                enPalabra = true;
+            }
+        } else {
+            enPalabra = false;
+        }
+    }
+    
+    std::cout << "Salida: " << palabras << " palabras" << std::endl;
+    return 0;
+}
