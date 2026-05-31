@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string A = "kbcatetqp";
+    std::string B = "amgphkn";
+    std::string C = "";
+    
+    for (size_t i = 0; i < A.length(); ++i) {
+        char caracter = A.at(i);
+        // Si se encuentra en B y no se ha agregado antes a C
+        if (B.find(caracter) != std::string::npos && C.find(caracter) == std::string::npos) {
+            C = C + caracter;
+        }
+    }
+    
+    std::cout << "C = { ";
+    for(size_t i = 0; i < C.length(); ++i) {
+        std::cout << C.at(i) << (i < C.length() - 1 ? ", " : "");
+    }
+    std::cout << " }" << std::endl;
+    return 0;
+}
