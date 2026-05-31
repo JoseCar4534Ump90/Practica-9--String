@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+int main() {
+    std::string texto = "jornadas de ciencias de la computacion";
+    
+    if (texto.length() > 0 && texto.at(0) != ' ') {
+        texto.at(0) = toupper(texto.at(0));
+    }
+    
+    for (size_t i = 1; i < texto.length(); ++i) {
+        if (texto.at(i - 1) == ' ' && texto.at(i) != ' ') {
+            texto.at(i) = toupper(texto.at(i));
+        }
+    }
+    
+    std::cout << "Salida: " << texto << std::endl;
+    return 0;
+}
