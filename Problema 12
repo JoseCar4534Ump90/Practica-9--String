@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+std::string BorraCaracterDeCadena(std::string cadena, char borrar) {
+    for (int i = cadena.length() - 1; i >= 0; --i) {
+        if (cadena.at(i) == borrar) {
+            cadena.erase(i, 1);
+        }
+    }
+    return cadena;
+}
+
+int main() {
+    std::string limpio = BorraCaracterDeCadena("hola, mundo", 'o');
+    std::cout << "Salida esperada: " << limpio << std::endl;
+    return 0;
+}
