@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+bool esVocal(char c) {
+    c = tolower(c);
+    return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+}
+
+int main() {
+    std::string texto = "me muero por conocer ese rio.";
+    int contador = 0;
+    std::string encontradas = "";
+    
+    for (size_t i = 0; i < texto.length() - 1; ++i) {
+        if (esVocal(texto.at(i)) && esVocal(texto.at(i + 1))) {
+            contador++;
+            if (!encontradas.empty()) encontradas.append(", ");
+            encontradas.append(texto.substr(i, 2));
+        }
+    }
+    
+    std::cout << contador << " vocales juntas: " << encontradas << std::endl;
+    return 0;
+}
