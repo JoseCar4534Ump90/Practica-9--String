@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string original = "SISTEMA";
+    std::string invertida = "";
+    
+    for (int i = original.length() - 1; i >= 0; --i) {
+        invertida = invertida + original.at(i);
+    }
+    
+    std::cout << "Salida esperada: " << invertida << std::endl;
+    
+    if (original == invertida) {
+        std::cout << "Es capicua o palindroma." << std::endl;
+    } else {
+        std::cout << "No es capicua." << std::endl;
+    }
+    return 0;
+}
