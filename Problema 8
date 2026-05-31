@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+int main() {
+    // Simulación de n palabras ingresadas
+    std::vector<std::string> palabras = {"No", "Busques", "Personas", "Con", "Tus", "Mismos", "Valores"};
+    std::string frase = "";
+    
+    for (size_t i = 0; i < palabras.size(); ++i) {
+        frase = frase + palabras[i];
+        if (i < palabras.size() - 1) {
+            frase.append(" ");
+        }
+    }
+    frase = frase + ".";
+    
+    std::cout << "Salida esperada: " << frase << std::endl;
+    return 0;
+}
