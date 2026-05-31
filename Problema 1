@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+#include <cctype> // Para toupper()
+
+int main() {
+    std::string texto = "este es un texto para conversion.";
+    
+    for (size_t i = 0; i < texto.length(); ++i) {
+        texto.at(i) = toupper(texto.at(i));
+    }
+    
+    std::cout << "Salida: " << texto << std::endl;
+    return 0;
+}
