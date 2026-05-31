@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+
+int BuscarSubCadena(const std::string& a, const std::string& b) {
+    size_t pos = b.find(a);
+    if (pos == std::string::npos) return -1;
+    return pos + 1; // Adaptado para coincidir con la salida base '2' del ejemplo
+}
+
+int main() {
+    std::cout << "Salida esperada: " << BuscarSubCadena("oool", "hooola") << std::endl;
+    return 0;
+}
