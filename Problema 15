@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+bool EsPalindromo(const std::string& texto) {
+    std::string invertida = "";
+    for (int i = texto.length() - 1; i >= 0; --i) {
+        invertida = invertida + texto.at(i);
+    }
+    return (texto.compare(invertida) == 0);
+}
+
+int main() {
+    std::cout << std::boolalpha; // Muestra true/false en consola
+    std::cout << "EsPalindromo(\"ana\") -> " << EsPalindromo("ana") << std::endl;
+    std::cout << "EsPalindromo(\"hola\") -> " << EsPalindromo("hola") << std::endl;
+    return 0;
+}
