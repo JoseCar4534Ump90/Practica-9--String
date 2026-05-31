@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+std::string Codifica(std::string texto, int c) {
+    for (size_t i = 0; i < texto.length(); ++i) {
+        char car = texto.at(i);
+        if (car >= 'a' && car <= 'z') {
+            texto.at(i) = 'a' + (car - 'a' + c) % 26;
+        } else if (car >= 'A' && car <= 'Z') {
+            texto.at(i) = 'A' + (car - 'A' + c) % 26;
+        }
+    }
+    return texto;
+}
+
+int main() {
+    std::string codificado = Codifica("hola, mundo", 3);
+    std::cout << "Salida esperada: " << codificado << std::endl;
+    return 0;
+}
