@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+
+std::string SubCadena(const std::string& cadena, int p, int n) {
+    if (p >= cadena.length()) return "";
+    return cadena.substr(p, n);
+}
+
+int main() {
+    // 0-indexed: h=0, o=1, o=2, o=3, o=4, l=5, a=6
+    std::string resultado = SubCadena("hoooola", 5, 3);
+    std::cout << "Salida esperada: " << resultado << std::endl;
+    return 0;
+}
